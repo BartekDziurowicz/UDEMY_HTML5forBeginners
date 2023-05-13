@@ -1,87 +1,41 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Listy</title>
+        <title>Tabele</title>
         <meta charset="utf-8">
     </head>
     <body>
-        <ul>
-            <li>punkt 1</li>
-            <li>punkt 2</li>
-            <li>punkt 3</li>
-        </ul>
-        <ul type="disc">
-            <li>punkt 1</li>
-            <li>punkt 2</li>
-            <li>punkt 3</li>
-        </ul>
-        <ul type="circle">
-            <li>punkt 1</li>
-            <li>punkt 2</li>
-            <li>punkt 3</li>
-        </ul>
-        <ul type="square">
-            <li>punkt 1</li>
-            <li>punkt 2</li>
-            <li>punkt 3</li>
-        </ul>
-
-        <ol start="2">
-            <li>punkt 1</li>
-            <li>punkt 2</li>
-            <li>punkt 3</li>
-        </ol>
-        <ol type="1">
-            <li>punkt 1</li>
-            <li>punkt 2</li>
-            <li>punkt 3</li>
-        </ol>
-        <ol type="i">
-            <li>punkt 1</li>
-            <li>punkt 2</li>
-            <li>punkt 3</li>
-        </ol>
-        <ol type="I">
-            <li>punkt 1</li>
-            <li>punkt 2</li>
-            <li>punkt 3</li>
-        </ol>
-        <ol type="a">
-            <li>punkt 1</li>
-            <li>punkt 2</li>
-            <li>punkt 3</li>
-        </ol>
-        <ol type="A" start="2">
-            <li>punkt 1</li>
-            <li>punkt 2</li>
-            <li>punkt 3</li>
-        </ol>
-        <dl>
-            <dt>Definicja 1</dt>
-            <dd>Opis definicji 1</dd>
-            <dt>Definicja 2</dt>
-            <dd>Opis definicji 2 Opis definicji 2Opis deficji 2Opis definicji 2</dd>
-            <dd>Opis definicji 2 Opis definicji 2Opis definicji 2Opis definicji 2</dd>
-            <dt>Definicja 3</dt>
-            <dd>Opis definicji 3</dd>
-        </dl>
-        <ol>
-            <li>Strony WWW
-                <ol type="a">
-                    <li>html</li>
-                    <li>css</li>
-                    <li>java</li>
-                </ol>
-            </li>
-            <li>Inne
-                <ol type="a">
-                    <li>html</li>
-                    <li>css</li>
-                    <li>java</li>
-                </ol>
-            </li>
-        </ol>
-        <hr />
-        
+        <table>
+            <caption>podpis tabeli - tylko raz po otwarciu tabeli, opcjonalny</caption>
+            <!-- th - table header, opcjonalny -->
+            <tr>
+                <th>lp</th>
+                <th>imie</th>
+                <th>nazwisko</th>
+                <th>grupa</th>
+                <th>ocena</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Jan</td>
+                <td>Kowalski</td>
+                <td>AD1</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Jacek</td>
+                <td>Nowak</td>
+                <td>AD2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Adam</td>
+                <td>Janowski</td>
+                <td>AD1</td>
+                <td>5</td>
+            </tr>
+        </table>
     </body>
 </html>

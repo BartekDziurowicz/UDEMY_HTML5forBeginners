@@ -62,6 +62,8 @@
             <button type="button" onclick="alert('Pressed')">zwykly button</button>
         </form>
 
+        <hr>
+
         <!-- textarea attr:
             name - unikatowa nazwa pola
             cols - szerokosc pola
@@ -75,9 +77,9 @@
             nie uzywamy tutaj value, wartosc domyslna ustawiamy pomiedzy znacznikami -->
         <form name="form" action="plik_obslugi.html" method="POST" novalidate>
             <textarea name="" id="" cols="30" rows="10"></textarea>
-            <button type="reset"><b>Wyslij</b></button>
-            <button type="submit"><b>Usun</b></button>
-        </form>  
+        </form> 
+        
+        <hr>
 
         <!-- number attr:
             min - wartosc minimalna
@@ -89,6 +91,8 @@
             <input type="number" />
         </form>  
 
+        <hr>
+
         <!-- time attr:
             type="time"
             value="12:30"
@@ -98,7 +102,35 @@
             w firefox trzeba wpisywac reczenie-->
         <form name="form" action="plik_obslugi.html" method="POST">
             <input type="time" value="12:30"/>
-        </form>      
+        </form>
+        
+        <hr>
+        <!-- pole DATE, MONTH, WEEK
+            type="date"
+            min="2017-01-01"
+            max="2019-12-31"
+            value="2018-11-08" 
+
+            type="month"
+            min="2017-01"
+            max="2019-12"
+            value="2018-11" 
+
+            type="week"
+            min="2017-W01"
+            max="2019-W51"
+            value="2018-W45" 
+
+            week i month nie dzialaja na firefox-->
+        <form name="form" action="plik_obslugi.html" method="POST">
+            <input type="date"/>
+        </form>
+        <form name="form" action="plik_obslugi.html" method="POST">
+            <input type="month"/>
+        </form>
+        <form name="form" action="plik_obslugi.html" method="POST">
+            <input type="week"/>
+        </form>
 
     </body>
 </html>

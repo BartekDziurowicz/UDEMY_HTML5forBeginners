@@ -9,6 +9,10 @@
                 display: inline-block;
                 width: 90px;
             }
+
+            textarea {
+                display: block;
+            }
         </style>
 
     </head>
@@ -50,5 +54,23 @@
             <button type="reset">Reset</button>
             <button type="button" onclick="alert('Pressed')">zwykly button</button>
         </form>
+
+        <!-- textarea attr:
+            name - unikatowa nazwa pola
+            cols - szerokosc pola
+            rows - wysokosc pola
+            maxlength - maksymalna liczba znakow w polu
+            tabindex - ustala kolejnosc pola w przypadku przemieszczania sie miedzy polami za pomoca klawisza tabulatora
+            placeholder - opis pola zachecajacy do wpisania wartosci
+            readonly - pole tylko do odczytu
+            autofocus - uaktywnienie pola
+            disabled - pole nieaktywne
+            nie uzywamy tutaj value, wartosc domyslna ustawiamy pomiedzy znacznikami -->
+        <form name="form" action="plik_obslugi.html" method="POST" novalidate>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <button type="reset"><b>Wyslij</b></button>
+            <button type="submit"><b>Usun</b></button>
+        </form>  
+
     </body>
 </html>

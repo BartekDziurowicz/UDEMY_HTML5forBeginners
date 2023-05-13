@@ -1,70 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Tabele</title>
+        <title>Formularze</title>
         <meta charset="utf-8">
-        <style>
-            table, th, td {
-                border: 1px solid black;
-                border-spacing: 20px;
-                border-collapse: collapse;                
-            }
-
-            table {
-                width: 100%;
-                table-layout: fixed;
-                text-align: center;
-            }
-        </style>
+        
     </head>
     <body>
-        <table border="1" width="100%" height="200px">
-            <caption>podpis tabeli - tylko raz po otwarciu tabeli, opcjonalny</caption>
-            <!-- th - table header, opcjonalny -->
-            <thead>
-                <tr>
-                    <th>lp</th>
-                    <th>imie</th>
-                    <th>nazwisko</th>
-                    <th>grupa</th>
-                    <th>ocena</th>
-                </tr>
-            </thead>
-        
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Jan</td>
-                    <td>Kowalski</td>
-                    <td rowspan="2">AD2</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Jacek</td>
-                    <td>Nowak</td>
-                    <!-- <td>AD2</td> -->
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td colspan="2">Adam</td>
-                    <!-- <td></td> -->
-                    <td>AD1</td>
-                    <td>5</td>
-                </tr>
-            </tbody>
-
-            <tfoot>
-                <tr>
-                    <td>lp</td>
-                    <td>imie</td>
-                    <td>nazwisko</td>
-                    <td>grupa</td>
-                    <td>ocena</td>
-                </tr>
-            </tfoot>
-
-        </table>
+        <form action="plik_obslugi.html" method="POST">
+            <p><label>Imie:<input type="text"/></label></p>
+            <p><label></label>Nazwisko:<input /></label></p>
+            <p><label></label>Wiek:<input /></label></p>
+            <p><label></label>Semestr:<input /></label></p>
+        </form>
     </body>
 </html>

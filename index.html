@@ -14,6 +14,12 @@
                 display: block;
                 resize: none;
             }
+
+            input {
+                width: 100px;
+            }
+
+
         </style>
 
     </head>
@@ -82,6 +88,17 @@
         <form name="form" action="plik_obslugi.html" method="POST" novalidate>
             <input type="number" />
         </form>  
+
+        <!-- time attr:
+            type="time"
+            value="12:30"
+            min="12:00"
+            max="16:00"
+            step=1 
+            w firefox trzeba wpisywac reczenie-->
+        <form name="form" action="plik_obslugi.html" method="POST">
+            <input type="time" value="12:30"/>
+        </form>      
 
     </body>
 </html>

@@ -14,17 +14,39 @@
     </head>
     <body>
         <form action="plik_obslugi.html" method="POST">
-            <p><label><span>Imie:</span><input type="text"/></label></p>
-            <p><label><span>Nazwisko:</span><input /></label></p>
-            <p><label><span>Wiek:</span><input /></label></p>
-            <p><label><span>Semestr:</span><input /></label></p>
+
+            <!-- text input attr:
+                value
+                placeholder
+                size
+                maxlength
+                autofocus
+                required
+                list
+                pattern
+                readonly
+                 -->
+     
+
+            <p><label><span>Imie:</span><input type="text" value="imie" size="30" autofocus pattern="[A-Z][a-z]+"/></label></p>
+            <p><label><span>Nazwisko:</span><input placeholder="nazwisko" required/></label></p>
+            <p><label><span>Wiek:</span><input maxlength="2"/></label></p>
+            <p><label><span>Semestr:</span><input list="browsers"/></label></p>
+
+            <datalist id="browsers">
+                <option value="Internet Explorer">
+                <option value="Firefox">
+                <option value="Google Chrome">
+                <option value="Opera">
+                <option value="Safari">
+              </datalist>
 
             <input type="submit" value="Sent to server" />
             <input type="reset" />
             <input type="button" value="zwykly button" onclick="alert('Pressed')"/>
 
             <p>before html5</p>
-            <button type="submit"><b>Sent</b>b> to server</button>
+            <button type="submit"><b>Sent</b> to server</button>
             <button type="reset">Reset</button>
             <button type="button" onclick="alert('Pressed')">zwykly button</button>
         </form>

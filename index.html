@@ -1,75 +1,17 @@
 <!DOCTYPE html>
-
 <html>
-  <head>
-    <title>podstawowe znaczniki formatujace</title>
-    <meta charset="utf-8" />
-    <meta name="description" content="Kurs HTML5">
-    <meta name="author" content="Bartosz">
-    <meta name="keywords" content="html5, kurs">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="styleshet" href="css/style.css">
-
-    <style>
-        p {
-            color: #555;
-        }
-    </style>
-
-    <script src="js/plik.js"></script>
-  </head>
-
-  <body>
-
-    <div> Naglowki - jest 6 obslugiwanych przez przegladarke:
-        <h1>Naglowek stopnia 1</h1>
-        <h2>Naglowek stopnia 2</h2>
-        <h3>Naglowek stopnia 3</h3>
-        <h4>Naglowek stopnia 4</h4>
-        <h5>Naglowek stopnia 5</h5>
-        <h6>Naglowek stopnia 6</h6>
-    </div>
-
-
-    <p>Akapit ...Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-
-    <p>Podstawowe znaczniki:<br>
-        <b>Pogrubienie</b><br>    
-        <strong>Pogrubienie i semantyka dla przegladarki  isyntetyzatora mowy</strong><br>
-        <i>Kursywa</i><br>
-        <s>Przekreslenie</s><br>
-        <u>Podkreslenie</u><br>
-        <em>Podkreslenie i semantyka</em><br>
-        <del>przekreslony i info dla przegladarki ze nieaktualny</del><br>
-        <ins>info dla przegladarki ze nowy</ins><br>
-    </p>
-
-    <p>Cytaty:
-    <blockquote>
-        Blok cytatu ...ins to info dla wyszukiwarki ze zostal wstawiony tekst Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </blockquote>
-    <q>cudzyslow</q><br>
-    <q cite="http://zrodlo strony">Zrodlo strony</q><br>
-    <a href="http://www.srodloxcvxc.com">Link</a><br>
-    <cite><a href="http://www.srodloxcvxc.com">Link ze zrodlem</a></cite>
-    </p>
-
-    <p>Indeks <sub>dolny</sub><p>
-    <p>Indeks <sup>gorny</sup><p></p>
-
-    <p>
-        Przelamuje tekst w tym miejscu |<wbr />| kiedy okno przegladarki sie zmniejsza
-    </p>
-
-    <hr>
-
-  </body>
+    <head>
+        <title>Odnosniki</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <p><a target="_blank" href="podstrona.html">Przejdz do podstorny</a></p>
+        <p><a target="_blank" href="podstrona.html"><img src="arrow.png" /></a></p>
+        <p><br /></p>
+        <p><a target="_blank" href="arrow.png">Przejscie do pliku graficznego</a></p>
+        <p><a target="_blank" href="earth.mp4">Przejscie do pliku mp4</a></p>
+        <p><a target="_blank" href="sample.mp3">Przejscie do pliku mp3</a></p>
+        <p><a target="_blank" href="mailto: email@google.com">Przejscie do maila</a></p>
+        <p><a target="_blank" href="tel: 123456789">zadzwon 123456789</a></p>
+    </body>
 </html>

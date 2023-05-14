@@ -3,6 +3,8 @@
     <head>
         <title>Multimedia</title>
         <meta charset="utf-8">
+    </head>
+    <body>
         <!-- 
             jpg, png, bmp, gif, svg
             znacznik: img
@@ -16,14 +18,32 @@
             <figure></figure> - obejmuje zdjecie oraz podpis do niego
             <figcaption></figcaption> - okresla podpis pod zdjeciem
          -->
-    </head>
-    <body>
-
         <figure>
             <img src="images/e1gklqmo.bmp" alt="plik xxx" title="sowa" width="300px"/>
             <img src="images/e1gklqmo.jpg" alt="plik xxx" title="sowa" width="200px"/>
             <figcaption>Bartosz</figcaption>
         </figure>
+        <hr>
+
+        <!-- najpopularniejsze obslugiwane przez przegladarki: mp3, wave
+            osadzanie plikow:
+            audio - odtwarzacz
+            source - zrodlo dzwieku
+            
+            atrybuty:
+            controls - kontrolki odtwarzacza
+            autoplay - odtwarzanei zaraz po zaladowaniu strony
+            loop - zapetelnie pliku
+            preload="auto" - buforowanie, wgrywanie pliku w tle podczas odtwarzania, przydaje sie przy dlugich plikach audio
+            muted - wyciszenie dzwieku
+        
+            src - sciezka-->
+
+            <audio controls autoplay loop preload="auto" muted>
+                <source src="music/sample-12s.mp3" />
+                <!-- gdyby przegladaraka nie obsluzyla mp3 to obsluzy wave -->
+                <source src="music/sample-12s.wave" />
+            </audio>
 
     </body>
 </html>

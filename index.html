@@ -1,265 +1,29 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Formularze</title>
+        <title>Multimedia</title>
         <meta charset="utf-8">
+        <!-- 
+            jpg, png, bmp, gif, svg
+            znacznik: img
+            atrybuty: 
+            src - sciezka do pliku, moze byc url z innej strony
+            alt - tekst w przypadku braku zaladowania pliku 
+            title - pojawia sie po najechaniu kursoerm na obraz
+            width, height
 
-        <style>
-            label span {
-                display: inline-block;
-                width: 90px;
-            }
-
-            textarea {
-                display: block;
-                resize: none;
-            }
-
-            input {
-                width: 100px;
-            }
-
-            fieldset {
-                display: inline-block;
-                width: 200px;
-            }
-
-        </style>
-
+            semantyka
+            <figure></figure> - obejmuje zdjecie oraz podpis do niego
+            <figcaption></figcaption> - okresla podpis pod zdjeciem
+         -->
     </head>
     <body>
-        <form action="plik_obslugi.html" method="POST">
 
-            <!-- text input attr:
-                value
-                placeholder
-                size
-                maxlength
-                autofocus
-                required
-                list
-                pattern
-                readonly
-                 -->
-     
+        <figure>
+            <img src="images/e1gklqmo.bmp" alt="plik xxx" title="sowa" width="300px"/>
+            <img src="images/e1gklqmo.jpg" alt="plik xxx" title="sowa" width="200px"/>
+            <figcaption>Bartosz</figcaption>
+        </figure>
 
-            <p><label><span>Imie:</span><input type="text" value="imie" size="30" autofocus pattern="[A-Z][a-z]+"/></label></p>
-            <p><label><span>Nazwisko:</span><input placeholder="nazwisko" required/></label></p>
-            <p><label><span>Wiek:</span><input maxlength="2"/></label></p>
-            <p><label><span>Semestr:</span><input list="browsers"/></label></p>
-
-            <datalist id="browsers">
-                <option value="Internet Explorer">
-                <option value="Firefox">
-                <option value="Google Chrome">
-                <option value="Opera">
-                <option value="Safari">
-              </datalist>
-
-            <input type="submit" value="Sent to server" />
-            <input type="reset" />
-            <input type="button" value="zwykly button" onclick="alert('Pressed')"/>
-
-            <p>before html5</p>
-            <button type="submit"><b>Sent</b> to server</button>
-            <button type="reset">Reset</button>
-            <button type="button" onclick="alert('Pressed')">zwykly button</button>
-        </form>
-
-        <hr>
-
-        <!-- textarea attr:
-            name - unikatowa nazwa pola
-            cols - szerokosc pola
-            rows - wysokosc pola
-            maxlength - maksymalna liczba znakow w polu
-            tabindex - ustala kolejnosc pola w przypadku przemieszczania sie miedzy polami za pomoca klawisza tabulatora
-            placeholder - opis pola zachecajacy do wpisania wartosci
-            readonly - pole tylko do odczytu
-            autofocus - uaktywnienie pola
-            disabled - pole nieaktywne
-            nie uzywamy tutaj value, wartosc domyslna ustawiamy pomiedzy znacznikami -->
-        <form name="form" action="plik_obslugi.html" method="POST" novalidate>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
-        </form> 
-        
-        <hr>
-
-        <!-- number attr:
-            min - wartosc minimalna
-            max - wartosc maxymalna
-            step - krok, moga byc ulamki
-            value - wartosc domyslna
-            name, readonly, disabled, placeholder, required -->
-        <form name="form" action="plik_obslugi.html" method="POST" novalidate>
-            <input type="number" />
-        </form>  
-
-        <hr>
-
-        <!-- time attr:
-            type="time"
-            value="12:30"
-            min="12:00"
-            max="16:00"
-            step=1 
-            w firefox trzeba wpisywac reczenie-->
-        <form name="form" action="plik_obslugi.html" method="POST">
-            <input type="time" value="12:30"/>
-        </form>
-        
-        <hr>
-        <!-- pole DATE, MONTH, WEEK
-            type="date"
-            min="2017-01-01"
-            max="2019-12-31"
-            value="2018-11-08" 
-
-            type="month"
-            min="2017-01"
-            max="2019-12"
-            value="2018-11" 
-
-            type="week"
-            min="2017-W01"
-            max="2019-W51"
-            value="2018-W45" 
-
-            week i month nie dzialaja na firefox-->
-        <form name="form" action="plik_obslugi.html" method="POST">
-            <input type="date"/>
-        </form>
-        <form name="form" action="plik_obslugi.html" method="POST">
-            <input type="month"/>
-        </form>
-        <form name="form" action="plik_obslugi.html" method="POST">
-            <input type="week"/>
-        </form>
-
-        <hr>
-
-        <!-- email i url
-            maxlength - maksymalna liczba znakow
-            minlength - minimalna liczba znakow
-            pattern - wyrazenie regularne
-            required
-            multiple - tylko email, mozliwosc wprowadzenia kilku adresow mailowych
-             -->
-        <form name="form" action="plik_obslugi.html" method="POST">
-            <input type="email"/>
-        </form>
-        <form name="form" action="plik_obslugi.html" method="POST">
-            <input type="url"/>
-        </form>
-
-        <hr>
-
-        <!-- password
-            type: password -->
-        <form name="form" action="plik_obslugi.html" method="POST">
-            <input type="password"/>
-        </form>
-
-        <hr>
-
-        <!-- range
-            min
-            max
-            step
-            value -->
-        <form name="form" action="plik_obslugi.html" method="POST">
-            <input type="range" min="0" max="10" step="2" value="2"/>
-        </form>  
-        
-        <hr>
-        <!-- Pole radio - pole jednokrotnego wyboru 
-            type - radio
-            checked - sam wyraz - domyslnie zaznaczone
-            disabled - wylacza pole
-            name - aby wszystkie elementy widzialy sie wzajemnie i byl mozliwy tylko jeden wybor
-            fieldset - zgrupowanie pol
-            legend - etykieta u gory-->
-
-        <form name="form" action="plik_obslugi.html" method="POST">
-            <fieldset>
-                <legend>Promocja</legend>
-                <label><input type="radio" name="name" checked value="laptop"/>Laptop</label>
-                <label><input type="radio" name="name"/>Xbox</label>
-                <label><input type="radio" name="name"/>Playstation</label>
-            </fieldset>
-        </form>  
-
-        <hr>
-        <!-- pole select
-            value - wartosc
-            name - atrybut niezbedny do odczytania wartosci po stronie serwera
-            selected - dany element bedzie domyslnie wybrany
-            disabled
-            size - liczba pozycji widocznych jednoczesnie
-            multiple - mozliwosc wielokrotnego wyboru -->
-
-            <form name="form" action="plik_obslugi.html" method="POST">
-                <select name="shopping-select" size="3" multiple>
-                    <option value="laptop">Laptop</option>
-                    <option>Xbox</option>
-                    <option selected>Playstation</option>
-                </select>
-            </form>
-
-        <hr>
-        <!-- pole checkbox - wielokrotny wybor
-            type - checkbox
-            checked - sam wyraz - domyslnei zaznaczony
-            disabled
-            
-            fieldset - zgrupowanie pol
-            legend - etykieta u gory-->
-
-            <form name="form" action="plik_obslugi.html" method="POST">
-                <fieldset>
-                    <legend>asortyment</legend>
-                    <label><input type="checkbox" name="pos1" value="samsung" checked/>Samsung</label>
-                    <label><input type="checkbox" name="pos2"/>Nokia</label>
-                    <label><input type="checkbox" name="pos3"/>Sony</label>
-                </fieldset>
-            </form> 
-
-         <hr>
-            <!-- pole color
-                type - color -->
-
-            <form name="form" action="plik_obslugi.html" method="POST">
-                <input type="color" name="col" value="#123456"/>
-            </form>
-            
-        <hr>
-            <!-- pole file 
-                type - file
-                accept - rozszerzenia dopuszczalnych plikow
-                required, name, multiple
-                -->
-
-            <form name="form" action="plik_obslugi.html" method="POST">
-                <input type="file" name="ourfile" required multiple accept=".html, .txt"/>
-            </form>
-
-        <hr>
-            <!-- atrybut Autocomplete 
-                - w polu typu text, jak nadamy name dla kazdego co powoduej jego unikalnosc
-                jak cos wpisalismy to podczas wpisywania drugi raz podpowie wczesniejsze wartosci,
-                jak nazwy name beda takei same to bedzie tylko jedna podpowiedz w kazdym polu,
-                domyslnie ustawiony na on -->
-
-            <form name="form" action="plik_obslugi.html" method="POST">
-                <input name="auto" autocomplete="off"/>
-            </form> 
-            
-         <hr>
-            <!-- atrybut novalidate
-                 domyslnie validator przepuszcza puste pola-->
-
-            <form name="form" action="plik_obslugi.html" method="POST" novalidate>
-                <input name="txt" pattern="[a-z][A-Z]" required/>
-            </form> 
     </body>
 </html>

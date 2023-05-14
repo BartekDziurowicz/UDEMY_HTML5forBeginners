@@ -19,6 +19,10 @@
                 width: 100px;
             }
 
+            fieldset {
+                display: inline-block;
+                width: 200px;
+            }
 
         </style>
 
@@ -165,7 +169,26 @@
             value -->
         <form name="form" action="plik_obslugi.html" method="POST">
             <input type="range" min="0" max="10" step="2" value="2"/>
-        </form>    
+        </form>  
+        
+        <hr>
+        <!-- Pole radio - pole jednokrotnego wyboru 
+            type - radio
+            checked - sam wyraz - domyslnie zaznaczone
+            disabled - wylacza pole
+            name - aby wszystkie elementy widzialy sie wzajemnie i byl mozliwy tylko jeden wybor
+            fieldset - zgrupowanie pol
+            legend - etykieta u gory-->
+
+        <form name="form" action="plik_obslugi.html" method="POST">
+            <fieldset>
+                <legend>Promocja</legend>
+                <label><input type="radio" name="name" checked value="laptop"/>Laptop</label>
+                <label><input type="radio" name="name"/>Xbox</label>
+                <label><input type="radio" name="name"/>Playstation</label>
+            </fieldset>
+        </form>  
+
 
     </body>
 </html>

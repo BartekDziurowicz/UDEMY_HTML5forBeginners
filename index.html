@@ -252,7 +252,14 @@
 
             <form name="form" action="plik_obslugi.html" method="POST">
                 <input name="auto" autocomplete="off"/>
-            </form>    
+            </form> 
+            
+         <hr>
+            <!-- atrybut novalidate
+                 domyslnie validator przepuszcza puste pola-->
 
+            <form name="form" action="plik_obslugi.html" method="POST" novalidate>
+                <input name="txt" pattern="[a-z][A-Z]" required/>
+            </form> 
     </body>
 </html>

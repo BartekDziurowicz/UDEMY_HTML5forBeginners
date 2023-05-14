@@ -5,78 +5,63 @@
         <meta charset="utf-8">
     </head>
     <body>
-        <!-- 
-            jpg, png, bmp, gif, svg
-            znacznik: img
-            atrybuty: 
-            src - sciezka do pliku, moze byc url z innej strony
-            alt - tekst w przypadku braku zaladowania pliku 
-            title - pojawia sie po najechaniu kursoerm na obraz
-            width, height
-
-            semantyka
-            <figure></figure> - obejmuje zdjecie oraz podpis do niego
-            <figcaption></figcaption> - okresla podpis pod zdjeciem
-         -->
-        <figure>
-            <img src="images/e1gklqmo.bmp" alt="plik xxx" title="sowa" width="300px"/>
-            <img src="images/e1gklqmo.jpg" alt="plik xxx" title="sowa" width="200px"/>
-            <figcaption>Bartosz</figcaption>
-        </figure>
+        <p>
+            <span>SPAN tag niczego nie formatuje ani nie zmienia,</span> do zaznaczenia/otagowania/wystylizowania/sformatowania/dania zdarzenia onclick na txt
+        </p>
+        <hr />
+        <p>
+            MARK to znacznik semantyczny do zaznaczenia tesktu majacy <mark>domyslne formatowanie</mark> do zaznaczenia/otagowania/wystylizowania/sformatowania/dania zdarzenia onclick na txt
+        </p>
+        <hr />
+        <p>
+            <details>
+                <summary>SUMMARY sluzy do ladowania tresci po kliknieciu a DETAILS do objecia summary i wyswietlanej tresci</summary>
+                <p>asdasfdsfdsfdsfsdf</p>
+                <p>cvbcvbbvcbvdsfdsfsdf</p>
+            </details>
+        </p>  
+        <hr />
+        <p>
+            <address>
+                znacznik ADDRESS semantyczny<br />
+                posiada domyslne formatowanie, mozna stylizowac itd, przyklad:<br />
+                Jan Kowalski<br />
+                ul. Janowska 17<br />
+                11-111 Stolica
+            </address>
+        </p> 
+        <hr />
+        <p> IFRAME do wyswietlania tresci z innych stron internetowych<br />
+            <iframe src="http://edugrafia.pl" width="400px"></iframe>
+        </p> 
         <hr>
-
-        <!-- najpopularniejsze obslugiwane przez przegladarki: mp3, wave
-            osadzanie plikow:
-            audio - odtwarzacz
-            source - zrodlo dzwieku
-            
-            atrybuty:
-            controls - kontrolki odtwarzacza
-            autoplay - odtwarzanei zaraz po zaladowaniu strony
-            loop - zapetelnie pliku
-            preload="auto" - buforowanie, wgrywanie pliku w tle podczas odtwarzania, przydaje sie przy dlugich plikach audio
-            muted - wyciszenie dzwieku
-        
-            src - sciezka-->
-
-            <audio controls autoplay loop preload="auto" muted>
-                <source src="music/sample-12s.mp3" />
-                <!-- gdyby przegladaraka nie obsluzyla mp3 to obsluzy wave -->
-                <source src="music/sample-12s.wave" />
-                <!-- dla starych przegladarek ktore nie obsluguja plikow audio lub tagu audio -->
-                <p>Twoje przegladarka nie obsluguje<br />
-                    <a href="files/plik.mp3">Pobierz</a>
-                </p>
-            </audio>
-            <hr>
-
-        <!-- najpopularniejsze obslugiwane przez przegladarki: mp4, webm, ogv
-            osadzanie plikow:
-            video - odtwarzacz
-            source - zrodlo dzwieku
-            
-            atrybuty:
-            controls - kontrolki odtwarzacza
-            autoplay - odtwarzanei zaraz po zaladowaniu strony
-            loop - zapetelnie pliku
-            preload="auto" - buforowanie, wgrywanie pliku w tle podczas odtwarzania, przydaje sie przy dlugich plikach audio
-            muted - wyciszenie dzwieku
-            width - szerokosc
-            height - wysokosc
-            poster - statyczny obrazek wyswietlany przed uruchomieniem odtwarzacza, niewidoczny przy autoplayu
-        
-            src - sciezka-->
-
-            <video controls loop preload="auto" muted width="300px" poster="video/earth.jpg">
-                <source src="video/earth.mp4" />
-                <source src="video/earth.webm" />
-                <source src="video/earth.ogv" />
-                <!-- dla starych przegladarek ktore nie obsluguja plikow audio lub tagu audio -->
-                <p>Twoje przegladarka nie obsluguje<br />
-                    <a href="files/plik.mp4">Pobierz</a>
-                </p>
-            </audio>
-
-
+        <p> TIME semantyczny, mozna stylizowac itd<br />
+            <label>godzina publikacji <time>10:21</time></label><br />
+            <time>10:21:23</time><br />
+            <time>PT5H15M2S</time><br />
+            <time>2019-09-23</time><br />
+            <time>2018-W40</time><br />
+            Jezeli uzywamy inngeo foramtu, nisdandardowego, korzystamy z atrybutu datetime: <br />
+            Ponadto mozemy wykorzystac od HTML5 atrybut pubdate co oznacza dla przegladarki semantycznie date publikacji<br />
+            <p>Publikacja <time datetime="2018-10-01T16:21" pubdate>dnia 01-10-2018 o godzinie 16:21</time></p>
+        </p> 
+        <hr>
+        <p> PROGRESS, pokazuje progres jakiegos zadania na stronie, jesli nie jest oblugiwany wyswietli napis pomiedzy znacnikami: <br />
+            <progress max="100" value="30">Trwa teraz ladowanie</progress>
+        </p>
+        <hr>
+        <p> METER, w przciwienstw do progresu jest mierzalny, low i high zmieniaja kolory, sluzy do statystyk <br />
+            <meter min="0" max="100" low="20" high="80" value="2">Trwa teraz ladowanie</meter>
+        </p>
+        <hr>
+        <p>WYCOFANE znaczniki<br />
+            basefont - okresla bazowa czcionke documentu, umieszczany w head,np: basefont color="" size="" face="" / <br />
+            font - zmiana parametrow czcionki wybranego fragmentu tesktu, stosuj span i stylowanie <br />
+            big - powiekszenie tekstu, alternatywa css: font-size: larger<br />
+            small - pomniejszenie tekstu, alternatywa css: font-size: smaller<br />
+            strike - przekreslenie tekstu, uzywaj tagu "s", "delete" lub css: text-decoration: line-through<br />
+            center - wysrodkowanie tekstu, alternatywa css: text-align: center
+            frameset - otwierajacy i zamykajaca, sluzy do budowania strony w oparciu o ramki, pomiedzy mozna zastosowac "frame src='' name='' ", alternatywa to DIV i nowe znaczniki struktury
+        </p>
     </body>
 </html>

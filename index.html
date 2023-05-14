@@ -243,5 +243,16 @@
                 <input type="file" name="ourfile" required multiple accept=".html, .txt"/>
             </form>
 
+        <hr>
+            <!-- atrybut Autocomplete 
+                - w polu typu text, jak nadamy name dla kazdego co powoduej jego unikalnosc
+                jak cos wpisalismy to podczas wpisywania drugi raz podpowie wczesniejsze wartosci,
+                jak nazwy name beda takei same to bedzie tylko jedna podpowiedz w kazdym polu,
+                domyslnie ustawiony na on -->
+
+            <form name="form" action="plik_obslugi.html" method="POST">
+                <input name="auto" autocomplete="off"/>
+            </form>    
+
     </body>
 </html>

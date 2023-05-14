@@ -48,6 +48,35 @@
                     <a href="files/plik.mp3">Pobierz</a>
                 </p>
             </audio>
+            <hr>
+
+        <!-- najpopularniejsze obslugiwane przez przegladarki: mp4, webm, ogv
+            osadzanie plikow:
+            video - odtwarzacz
+            source - zrodlo dzwieku
+            
+            atrybuty:
+            controls - kontrolki odtwarzacza
+            autoplay - odtwarzanei zaraz po zaladowaniu strony
+            loop - zapetelnie pliku
+            preload="auto" - buforowanie, wgrywanie pliku w tle podczas odtwarzania, przydaje sie przy dlugich plikach audio
+            muted - wyciszenie dzwieku
+            width - szerokosc
+            height - wysokosc
+            poster - statyczny obrazek wyswietlany przed uruchomieniem odtwarzacza, niewidoczny przy autoplayu
+        
+            src - sciezka-->
+
+            <video controls loop preload="auto" muted width="300px" poster="video/earth.jpg">
+                <source src="video/earth.mp4" />
+                <source src="video/earth.webm" />
+                <source src="video/earth.ogv" />
+                <!-- dla starych przegladarek ktore nie obsluguja plikow audio lub tagu audio -->
+                <p>Twoje przegladarka nie obsluguje<br />
+                    <a href="files/plik.mp4">Pobierz</a>
+                </p>
+            </audio>
+
 
     </body>
 </html>

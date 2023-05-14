@@ -189,6 +189,22 @@
             </fieldset>
         </form>  
 
+        <hr>
+        <!-- pole select
+            value - wartosc
+            name - atrybut niezbedny do odczytania wartosci po stronie serwera
+            selected - dany element bedzie domyslnie wybrany
+            disabled
+            size - liczba pozycji widocznych jednoczesnie
+            multiple - mozliwosc wielokrotnego wyboru -->
+
+            <form name="form" action="plik_obslugi.html" method="POST">
+                <select name="shopping-select" size="3" multiple>
+                    <option value="laptop">Laptop</option>
+                    <option>Xbox</option>
+                    <option selected>Playstation</option>
+                </select>
+            </form>
 
     </body>
 </html>
